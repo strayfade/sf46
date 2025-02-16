@@ -1,4 +1,4 @@
-![](./images/render.webp)
+![](./images/sf461.webp)
 
 <h1 align="center">sf46</h1>
 
@@ -50,3 +50,9 @@ Firmware will be released as free and open-source after all of the bugs have bee
 The **sf46** keyboard design and CAD files are released under the **GPLv3** license.
 
 This project uses code from the [ESP32-BLE-Keyboard](https://github.com/T-vK/ESP32-BLE-Keyboard) repository.
+
+### Gallery
+
+![](./images/sf462.webp)
+![](./images/sf463.webp)
+![](./images/sf464.webp)
