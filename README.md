@@ -25,7 +25,7 @@ The **sf46** is an ergonomic 46-key split mechanical keyboard based on the ESP32
 
 - PCB ([Download Gerber](/pcb/Gerber_sf46.zip))
   - Repo includes [design files](/pcb/EasyEDA_sf46.json) for importing into EasyEDA
-- 3D-printed case ([Download .STEP](/cad/case_v4.step))
+- 3D-printed case ([Download .STEP](/cad/case_v5.step))
 - Keyswitch plate ([Download .STEP](/cad/plate_v3.step))
 - **46x** Full-size MX-style keyswitches
 - **46x** MX-style Hot Swap Switch Mounts
