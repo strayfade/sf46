@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../../../../Arduino/libraries/ESP32_BLE_Keyboard"
+		},
+		{
+			"name": "sf46",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}
