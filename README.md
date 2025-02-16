@@ -3,7 +3,7 @@
 <h1 align="center">sf46</h1>
 
 <p align="center">
-    <a href="https://certification.oshwa.org/us002610.html">
+    <a href="https://certification.oshwa.org/">
         <img src="https://img.shields.io/badge/OSHWA%20Certification-Pending-FF4444?style=flat&labelColor=333333">
     </a>
 </p>
