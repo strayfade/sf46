@@ -1,13 +1,13 @@
 //#define KEYBOARD_LEFTSIDE
 
-#define KEYBOARD_DEBOUNCE_MS 15
+#define KEYBOARD_DEBOUNCE_MS 50
 
 #define KEY_MOD_1 0xFD
 #define KEY_MOD_2 0xFE
 
 #include <Arduino.h>
 #include <vector>
-#include <BleKeyboard.h>
+#include "../include/BleKeyboard.h"
 
 BleKeyboard bleKeyboard("sf46", "Noah Taylor");
 
@@ -33,6 +33,8 @@ struct keyboard_t {
 } keyboard;
 
 void onKeyStateChange(key* ref) {
+  Serial.print(keyboard.modifier);
+  Serial.print(" : ");
   Serial.print(ref->lastStateChange);
   Serial.print(" : ");
   Serial.print(ref->isPressed ? "Pressed" : "Release");
@@ -77,7 +79,7 @@ keymap_t layer0 = {
     k('w'),
     k('s'),
     k('x'),
-    k(KEY_LEFT_CTRL)
+    k(KEY_LEFT_ALT)
   },
   {
     k('e'),
@@ -89,7 +91,7 @@ keymap_t layer0 = {
     k('r'),
     k('f'),
     k('v'),
-    k(KEY_LEFT_ALT)
+    k(KEY_LEFT_CTRL)
   },
   {
     k('t'),
@@ -135,6 +137,43 @@ keymap_t layer1 = {
     k()
   }
 };
+keymap_t layer2 = {
+  {
+    k(),
+    k(),
+    k()
+  },
+  {
+    k(),
+    k(),
+    k(),
+    k(KEY_MOD_1)
+  },
+  {
+    k(),
+    k(),
+    k(),
+    k()
+  },
+  {
+    k(),
+    k(),
+    k(),
+    k()
+  },
+  {
+    k(),
+    k(),
+    k(),
+    k()
+  },
+  {
+    k(),
+    k(),
+    k(),
+    k()
+  }
+};
 #else
 keymap_t layer0 = {
   {
@@ -152,7 +191,7 @@ keymap_t layer0 = {
     k('o'),
     k('l'),
     k('.'),
-    k(KEY_RIGHT_CTRL)
+    k(KEY_RIGHT_ALT)
   },
   {
     k('i'),
@@ -164,7 +203,7 @@ keymap_t layer0 = {
     k('u'),
     k('j'),
     k('m'),
-    k(KEY_RIGHT_ALT)
+    k(KEY_MOD_2)
   },
   {
     k('y'),
@@ -201,10 +240,47 @@ keymap_t layer1 = {
     k('7'),
     k(),
     k(),
-    k()
+    k(KEY_MOD_2)
   },
   {
     k('6'),
+    k(),
+    k(),
+    k()
+  }
+};
+keymap_t layer2 = {
+  {
+    k(),
+    k(),
+    k()
+  },
+  {
+    k('='),
+    k('\''),
+    k(),
+    k(KEY_MOD_1)
+  },
+  {
+    k('-'),
+    k(KEY_RIGHT_ARROW),
+    k(),
+    k()
+  },
+  {
+    k(KEY_UP_ARROW),
+    k(KEY_DOWN_ARROW),
+    k(),
+    k()
+  },
+  {
+    k(),
+    k(KEY_LEFT_ARROW),
+    k(),
+    k(KEY_MOD_2)
+  },
+  {
+    k(),
     k(),
     k(),
     k()
@@ -226,7 +302,7 @@ void setup() {
   }
 
   // Set layers
-  keyboard.layers = { layer0, layer1 };
+  keyboard.layers = { layer0, layer1, layer2 };
 }
 
 void loop() {
