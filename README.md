@@ -3,14 +3,20 @@
 <h1 align="center">sf46</h1>
 
 <p align="center">
-    <a href="https://certification.oshwa.org/">
-        <img src="https://img.shields.io/badge/OSHWA%20Certification-Pending-FF4444?style=flat&labelColor=333333">
+    <a href="https://certification.oshwa.org/us002721.html">
+        <img src="https://img.shields.io/badge/OSHWA%20Certification-US002721-FF4444?style=flat&labelColor=333333">
     </a>
 </p>
 
 ### About
 
 The **sf46** is an ergonomic 46-key split mechanical keyboard based on the ESP32 family of chips by Espressif
+
+> This project has been certified by the OSHWA as open source hardware.
+>
+> ```html
+> [OSHW] US002721 | Certified open source hardware | oshwa.org/cert
+> ```
 
 ### Features
 
